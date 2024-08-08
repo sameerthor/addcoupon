@@ -1,0 +1,570 @@
+/* breadcrumb */
+.breadcrumb{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+.breadcrumb .share{
+    display: flex;
+    flex-direction: row-reverse;    
+    padding: 0 .4rem;
+}
+.breadcrumb .shareBtn{
+    background-color: rgba(229, 231, 235);
+    color: #232323;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumb .shareSocialLinks a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .3rem;
+}
+.breadcrumb .shareSocialLinks{
+    display: none;
+}
+.breadcrumb .shareSocialLinks.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.breadcrumb ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.breadcrumb ul li{
+    margin-right: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.breadcrumb ul li a{
+   color: #0066ff;
+}
+
+
+.allCategories{
+    background-color: #fff;
+    padding: 3rem 0;
+}
+.allCategories .container{
+    max-width: 1100px;
+}
+.allCategories h1{
+    font-weight: 600;
+    color: #2e2e2e;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+@media(min-width: 991px){
+    .catBox{
+        margin-right: .5rem;
+    }
+}
+.catCard{
+    border: solid 1px #e7e7e7;
+    background-color: #fff;
+    border-radius: 6px;
+    min-width: 150px;
+    width: 100%;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.catCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.catCard .imgBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    background: #2f3c97;
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    font-weight: 600;
+    text-align: center;
+    min-height: 90px;
+    justify-content: center;
+    line-height: 1.4;
+ }
+.catCard .imgBox img{
+   height: 100px;
+   object-fit: contain;
+   margin-right: .5rem;
+}
+.catCard .imgBox span{
+   font-size: .8rem;
+   font-weight: 600;
+   color: #2e2e2e;
+   padding-top: 1rem;
+
+ }
+ .catCard .dealCount{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   border-top: 1px solid #e2e2e2;
+   padding: 10px;
+   padding-top: .5rem;
+   background-color: rgba(239, 246, 255);
+   border-radius: 0px 0px 6px 6px;
+  }
+  .catCard .dealCount span{
+   font-size: .75rem;
+   font-weight: 600;
+   color: #2e2e2e;
+   display: block;
+   text-align: center;
+   }
+  
+   .catCard .dealCount span small{
+    padding: 0 .2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #999;
+    }
+.catSidebar .sidebarWidget{
+    display: block;
+    border: solid 1px #e7e7e7;
+    background: #fff;
+    border-radius: 6px;
+    padding: 18px;
+    position: static;
+    margin-bottom: 24px;
+}
+.catSidebar .sidebarWidget h2{
+    color: #222;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+.catSidebar .sidebarWidget ul li{
+    font-weight: 500;
+    margin-bottom: .4rem;
+}
+.catSidebar .sidebarWidget ul li a{
+  color: #2491ef;
+  font-size: .85rem;
+}
+.sidebarWidget.catDesc{
+    padding: 0;
+  
+}
+.sidebarWidget.catDesc .catHeading{
+    background-color: #2f3c97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+.sidebarWidget.catDesc h2{
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.8rem;
+}
+.sidebarWidget.catDesc .catValue{
+    padding: 18px;
+}
+.sidebarWidget.catDesc .catValue p{
+   font-weight: 500;
+   font-size: .8rem;
+   margin-bottom: .4rem;
+}
+.sidebarWidget.catDesc .catValue h4{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: .4rem;
+ }
+ .sidebarWidget .verifiedBox{
+    background-color: #f9f9f9;
+    border-radius: 0px 0px 4px 4px;
+ }
+ .sidebarWidget .verifiedBox p{
+    padding: 18px 5px;
+    font-size: .85rem;
+    font-weight: 500;
+ }
+
+
+ /* ============== */
+
+.stars i{
+    color: #ffbd00;
+    display: inline-block;
+}
+.stars span{
+    display: block;
+    margin-top: .5rem;
+    font-size: .8rem;
+}
+.subCatBox .storeItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #eee;
+    padding: 15px 10px;
+    border: 1px solid #eee;
+}
+.subCatBox .storeInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+.subCatBox .dealBtnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.storeData .discountValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+}
+.storeData .storeImage {
+    border: 1px solid #eee;
+    max-height: fit-content;
+    max-width: 6rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.storeData .storeImage img {
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 4rem;
+}
+.storeItem .storeData .storeName {
+    font-size: 1rem;
+    display: block;
+    line-height: 1.4;
+    color: #2e2e2e;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    margin-bottom: .5rem;
+}
+.storeItem .storeData .activeDeals {
+    display: block;
+    font-weight: 500;
+    color: #666;
+    font-size: .95rem;
+    letter-spacing: .5px;
+}
+.storeItem .dealBtnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.storeItem .flexverify {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+.storeItem .storeUrl {
+    font-size: .88rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: .2rem;
+    color: #999;
+    letter-spacing: .5px;
+    line-height: 1;
+    color: #2e2e2e;
+    padding-bottom: .1rem;
+    border-bottom: 1px solid #fff;
+    display: block;
+}
+.storeItem .verifiedCoupon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.storeItem .grabDeal {
+    -spacing: .5px;
+    font-size: .95rem;
+}
+.storeItem .grabDeal a {
+    display: flex;
+    font-weight: 600;
+    padding: .4rem 1rem;
+    background-color: #2f3c97;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    align-items: center;
+}
+.storeItem .verifiedCoupon span {
+    font-size: .85rem;
+    color: #999;
+    padding-left: .3rem;
+}
+.pagination{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.pagination ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pagination ul li a{ 
+    padding: .3rem 1rem;
+    border: 1px solid #2f3c97;
+    display: inline-block;
+    margin: 0 .5rem;
+    border-radius: 3px;
+    font-weight: 500;
+    color: #2e2e2e;
+    text-decoration: none;
+    cursor: pointer;
+}
+.pagination ul li a.active{
+    background-color: #2f3c97;
+    color: #fff;
+}
+
+/* subscribe */
+
+.subscribeBox{
+    background-color: #fff;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 350px;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    flex-direction: column;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm h2{
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm form{
+    max-width: 98%;
+    width: 600px;
+}
+ .subscribeBoxInner .subcribeForm form .inputBox{
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 2rem;
+   align-items: center;
+   border: 1px solid #e2e2e2;
+   padding: 0 .5rem;
+}
+.subscribeBoxInner .subcribeForm form small{
+   padding: 0 .2rem;
+   font-weight: 500;
+   color: #2e2e2e;
+   letter-spacing: .5px;
+   font-size: .7rem;
+   display: block;
+   margin-bottom: 1.5rem;
+ }
+ .subscribeBoxInner .subcribeForm form small a{
+    color: #0066ff;
+  }
+.subscribeBoxInner .subcribeForm form .inputBox:nth-of-type(2){
+    margin-bottom: .2rem;
+ }
+.subscribeBoxInner .subcribeForm form .inputBox input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+ }
+ .subscribeBoxInner .subcribeForm form .inputBox input::placeholder{
+    font-weight: 500;
+    color: #2e2e2e;
+    font-size: .85rem;
+    letter-spacing: .5px;
+ }
+ .subscribeBoxInner .subcribeForm form .inputBox input:focus{
+    box-shadow: none;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn{
+    margin: auto;
+    text-align: center;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn button{
+    width: 400px;
+    max-width: 98%;
+    outline: none;
+    border: none;
+    background-color: #2f3c97;
+    color: #fff;
+    font-weight: 500;
+    padding: .6rem 1rem;
+    letter-spacing: .5px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-transform: uppercase;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn button:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ @media(max-width: 768px){
+    .subscribeBox .subscribeBoxInner .subcribeForm{
+        padding: 3rem 1rem;
+    }
+ }
+
+ .pageHeading{
+    font-weight: 600;
+    color: #2e2e2e;
+    font-size: 1.65rem;
+    margin-bottom: 1.2rem;
+ }
+
+ .storePage .container{
+    max-width: 1200px;
+ }
+ 
+ .offerToday h3{
+    font-weight: 600;
+    color: #2e2e2e;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+ }
+ .offerToday table{
+    margin-bottom: 1rem;
+    width: 100%;
+ }
+ .offerToday table tr td{
+    font-weight: 500;
+    color: #2e2e2e;
+    font-size: .9rem;
+    padding-bottom: .5rem;
+ }
+ .offerToday table tr td:nth-of-type(2){
+    text-align: right;
+    font-weight: 600;
+ }
+ .similarStore .widgetHeading{
+    font-weight: 600;
+    color: #2e2e2e;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+ }
+ .similarStore ul li{
+    margin-bottom: .3rem;
+ }
+ .similarStore ul li a{
+   font-weight: 500;
+   color: #2e2e2e;
+   font-size: .88rem;
+ }
+
+ @media(max-width: 600px){
+    .subCatBox{
+        padding: 0;
+    }
+ }
+ .storeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: .5rem .5rem !important;
+    width: 200px;
+    margin: auto;
+    border-radius: .5rem;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.storeBox .imgBox {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storeBox .imgBox img {
+    display: block;
+    height: 100px;
+    padding: .5rem;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+
+
+.storeBox .dealCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    border-radius: 0 0 .5rem .5rem;
+    padding: .65rem 0;
+    border: 1px solid #e2e2e2;
+    border-bottom: none;
+    background-color: rgba(239, 246, 255);
+}
+
+.storeBox .dealCount span {
+    text-align: center;
+    color: rgba(37, 99, 235);
+    font-weight: 500;
+    letter-spacing: .5px;
+    font-size: .85rem;
+}
+.sidebarWidget .verifiedBox p svg{
+   margin-right: .2rem;
+}

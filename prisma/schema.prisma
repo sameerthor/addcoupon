@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model mysite_category {
+  id               BigInt  @id @default(autoincrement())
+  title            String  @db.VarChar(300)
+  body             String? @db.LongText
+  meta_description String? @db.LongText
+  meta_title       String? @db.LongText
+  slug             String  @db.VarChar(50) @unique
+  image            String? @db.VarChar(100)
+  stores           mysite_store_category[]
+
+  @@index([slug], map: "mysite_category_slug_a7508ce3")
+}
+
+model mysite_coupon {
+  id                   BigInt        @id @default(autoincrement())
+  title                String        @db.VarChar(500)
+  store_id             BigInt?
+  content              String?       @db.LongText
+  coupon_code          String?       @db.VarChar(100)
+  coupon_type          String?       @db.VarChar(100)
+  discount_value       String?       @db.VarChar(300)
+  exclusive_coupon     Boolean?
+  expires              DateTime?     @db.DateTime(6)
+  free_shipping_coupon Boolean?
+  number_coupon_used   Int?
+  number_views         Int?
+  start_date           DateTime?     @db.DateTime(6)
+  vote_down            Int?
+  vote_up              Int?
+  term_condition       String?       @db.LongText
+  store                mysite_store? @relation(fields: [store_id], references: [id])
+
+  @@index([store_id], map: "mysite_coupon_store_id_ab3fc915")
+}
+
+model mysite_post {
+  id               BigInt   @id @default(autoincrement())
+  title            String   @db.VarChar(300)
+  slug             String   @db.VarChar(50)
+  body             String?  @db.LongText
+  meta_title       String?  @db.LongText
+  meta_description String?  @db.LongText
+  image            String?  @db.VarChar(100)
+  created_at       DateTime @db.DateTime(6)
+  updated_at       DateTime @db.DateTime(6)
+
+  @@index([slug], map: "mysite_post_slug_6a1acc8d")
+}
+
+model mysite_post_category {
+  id              BigInt @id @default(autoincrement())
+  post_id         BigInt
+  postcategory_id BigInt
+
+  @@unique([post_id, postcategory_id], map: "mysite_post_category_post_id_category_id_38433975_uniq")
+  @@index([postcategory_id], map: "mysite_post_category_category_id_7deb2e3d")
+  @@index([post_id], map: "mysite_post_category_post_id_cc8dbcf6")
+}
+
+model mysite_postcategory {
+  id               BigInt  @id @default(autoincrement())
+  title            String  @db.VarChar(300)
+  slug             String  @db.VarChar(50)
+  body             String? @db.LongText
+  meta_title       String? @db.LongText
+  meta_description String? @db.LongText
+
+  @@index([slug], map: "mysite_postcategory_slug_f2eae467")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model mysite_rating {
+  id       BigInt @id @default(autoincrement())
+  one      Int?   @db.UnsignedInt
+  two      Int?   @db.UnsignedInt
+  three    Int?   @db.UnsignedInt
+  four     Int?   @db.UnsignedInt
+  five     Int?   @db.UnsignedInt
+  store_id BigInt
+  store    mysite_store? @relation(fields: [store_id], references: [id])
+
+
+  @@index([store_id], map: "mysite_rating_store_id_f62be717")
+}
+
+model mysite_store {
+  id                BigInt                  @id @default(autoincrement())
+  title             String                  @db.VarChar(300)
+  slug              String                  @unique @db.VarChar(50)
+  affiliate_url     String?                 @db.VarChar(1000)
+  change_frequency  String?                 @db.VarChar(100)
+  extra_info        String?                 @db.LongText
+  focus_keywords    String?                 @db.VarChar(500)
+  home_url          String?                 @db.VarChar(1000)
+  image             String?                 @db.VarChar(100)
+  image_alt         String?                 @db.VarChar(300)
+  image_title       String?                 @db.VarChar(300)
+  priority          String?                 @db.VarChar(100)
+  seo_description   String?                 @db.LongText
+  seo_title         String?                 @db.VarChar(68)
+  store_description String?                 @db.LongText
+  store_h1          String?                 @db.VarChar(500)
+  contact           String?                 @db.VarChar(500)
+  home_options      String?                 @db.VarChar(100)
+  coupon_set        mysite_coupon[]
+  categories        mysite_store_category[]
+  rating            mysite_rating[]
+
+
+  @@index([slug], map: "mysite_store_slug_c2f829f4")
+}
+
+model mysite_store_category {
+  id             BigInt        @id @default(autoincrement())
+  store_id       BigInt
+  category_id    BigInt
+  store          mysite_store? @relation(fields: [store_id], references: [id])
+  category       mysite_category? @relation(fields: [category_id], references: [id])
+
+  @@unique([store_id, category_id], map: "mysite_store_category_store_id_category_id_20a922cc_uniq")
+  @@index([category_id], map: "mysite_store_category_category_id_d3f503b3")
+  @@index([store_id], map: "mysite_store_category_store_id_37719adf")
+}

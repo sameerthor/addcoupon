@@ -1,0 +1,242 @@
+.allStorePage{
+    background-color: #f6f6f6;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+ }
+ .allStorePage .container{
+    max-width: 1000px;
+ }
+ .allStorePage .storeBox{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .047);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+ }
+ .allStorePage .alpha-store h1{
+    font-size: 30px;
+    color: #666;
+    font-weight: 700;
+    line-height: 1.4;
+ }
+ .allStorePage .alpha-store p{
+    font-size: 16px;
+    color: #666;
+    margin-top: 15px;
+    font-weight: 500;
+ }
+ .alpha-store .all_list {
+    border-bottom: 2px dashed #e5e5e5;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+.alpha-store>p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 15px;
+}
+.alpha-store p .getStore {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #2196f3;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+}
+.alpha-store p .getStore:first-child {
+    width: 28px;
+    height: 26px;
+}
+.alpha-store p .getStore:hover {
+   background-color: #2f3c97;
+   color: #fff;
+}
+.alpha-store .storeList {
+    border-bottom: 2px dashed #e5e5e5;
+    padding: 30px 0 30px 0px;
+    position: relative;
+}
+.alpha-store .storeList .storeTag {
+    width: 50px;
+    line-height: 37px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 30px;
+    left: -21px;
+    background-color: #2f3c97;
+    padding-left: 5px;
+}
+.alpha-store .storeList ul {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.alpha-store .storeList ul li {
+   width: calc(98%/4);
+    line-height: 20px;
+    margin-bottom: 10px;
+    word-break: break-word;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+.alpha-store .storeList ul li a{
+    font-weight: 500;
+    color: #2e2e2e;
+    font-size: .9rem;
+ }
+ .alpha-store .storeList ul li a span{
+   display: block;
+   font-weight: 400;
+   margin-top: .2rem;
+   font-size: .85rem;
+}
+@media(max-width: 768px){
+    .alpha-store .storeList ul li {
+        width: calc(98%/2);
+     }
+}
+@media(max-width:600px){
+    .allStorePage .container{
+        padding: 0;
+     }
+     .alpha-store .storeList .storeTag {
+        width: 40px;
+     }
+     .alpha-store .storeList {
+        border-bottom: 2px dashed #e5e5e5;
+        padding: 30px 0 30px 0px;
+        position: relative;
+    }
+    .alpha-store .storeList ul li {
+       padding-left: 10px;
+     }
+     .allStorePage .storeBox {
+        padding: 20px;
+        padding-right: 5px;
+        padding-left: 5px;
+     }
+}
+ /* subscribe */
+ .subscribeBox{
+    background-color: #fff;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribeBox .subscribeBoxInner .subscribeImg img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 350px;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    flex-direction: column;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm h2{
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+}
+.subscribeBox .subscribeBoxInner .subcribeForm form{
+    max-width: 98%;
+    width: 600px;
+}
+ .subscribeBoxInner .subcribeForm form .inputBox{
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 2rem;
+   align-items: center;
+   border: 1px solid #e2e2e2;
+   padding: 0 .5rem;
+}
+.subscribeBoxInner .subcribeForm form small{
+   padding: 0 .2rem;
+   font-weight: 500;
+   color: #2e2e2e;
+   letter-spacing: .5px;
+   font-size: .7rem;
+   display: block;
+   margin-bottom: 1.5rem;
+ }
+ .subscribeBoxInner .subcribeForm form small a{
+    color: #1a0dab;
+    font-weight: 500;
+  }
+.subscribeBoxInner .subcribeForm form .inputBox:nth-of-type(2){
+    margin-bottom: .2rem;
+ }
+.subscribeBoxInner .subcribeForm form .inputBox input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+ }
+ .subscribeBoxInner .subcribeForm form .inputBox input::placeholder{
+    font-weight: 500;
+    color: #2e2e2e;
+    font-size: .85rem;
+    letter-spacing: .5px;
+ }
+ .subscribeBoxInner .subcribeForm form .inputBox input:focus{
+    box-shadow: none;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn{
+    margin: auto;
+    text-align: center;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn button{
+    width: 400px;
+    max-width: 98%;
+    outline: none;
+    border: none;
+    background-color: #2f3c97;
+    color: #fff;
+    font-weight: 500;
+    padding: .6rem 1rem;
+    letter-spacing: .5px;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-transform: uppercase;
+ }
+ .subscribeBoxInner .subcribeForm form .subscribeBtn button:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ @media(max-width: 768px){
+    .subscribeBox .subscribeBoxInner .subcribeForm{
+        padding: 3rem 1rem;
+    }
+ }
+ .alpha-store .storeList:last-child{
+   border-bottom: none;
+}
